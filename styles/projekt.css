@@ -1,0 +1,363 @@
+div{
+	/*border:1px solid red;*/
+}
+
+
+/* Allgemeine Angaben */
+
+	/* background img funktioniert noch nicht im IE */
+body{
+	font-family:Arial, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:1.5em;
+	background-image: url(images/background.jpg);
+	background-repeat: repeat;
+}
+
+a{
+	color:#96B566;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
+	color:#999;
+}
+
+h4{
+	color:#96B566;
+}
+
+h5 {
+	border-bottom:1px solid #DFDFDF;
+	background-color:#EFEFEF;
+	width:91%;
+	margin:0;
+	padding:1% 1% 1% 8%;
+	font-size:12px;
+}
+
+img {
+	border:none;
+}
+
+.clearer{
+	clear:both;
+	padding:0;
+	margin:0;
+}
+/* ENDE Allgemeine Angaben */
+
+
+/* Seiten-Layouts */
+
+#container{
+	width:760px;
+	margin:0 auto;
+}
+
+	/* Main Page Aufteilung div */
+	
+#header{
+	width:100%;
+	height:80px;
+	padding:1%;
+	margin:4% 0 2% 0;
+}
+
+#left{
+	float:left;
+	width:25%;
+	height:auto;
+	padding:1%;	
+}
+
+#right{
+	float:right;
+	width:70%;
+	height:auto;
+	padding:1%;	
+}
+
+#footer{
+	width:100%;
+	height:70px;
+	padding:1%;
+}
+	
+	/* ENDE Main page Aufteilung div */
+	
+/* Main page Design */
+
+	/* Header Inhalt*/
+#header_container{
+	color:#96b566;
+	background-color:#fff;
+	font-weight:bold;
+	border:4px solid #DFDFDF;
+	width:100%;
+	height:100%;
+}
+	
+#header_grafik{
+	float:left;
+	width:200px;
+	height:100%;
+	background:url(images/header.jpg) no-repeat;
+}
+
+#header_content{
+	float:right;
+	width:540px;
+	height:100;
+	padding:5px;
+}
+	
+#header_content h1{
+	margin-top:5px;
+	padding:0;
+	font-size:20px;
+	line-height:1.3em;
+	color:#000;
+}
+
+#header_content h2{
+	margin-top:15px;
+	padding:0;
+	font-size:25px;
+	line-height:1.3em;
+	color:#96B566;
+}
+
+		/* Menue */
+#menue_container{
+	width: 100%;
+	height:100%;
+	min-height:250px;
+	background-color: #fff;
+	border-right:4px solid #DFDFDF;
+	border-bottom:4px solid #DFDFDF;
+}
+
+#menue_container a{
+	color: #333;
+	width: 97%;
+	padding:2% 2% 1% 1.2%;
+	display: block;
+	text-decoration:none;
+}
+
+#menue_container a:hover{
+	color: #666;
+	background-color:#EFEFEF;
+	border-right:4px solid #333;
+}
+
+#menue_container ul{
+	list-style-type: none;
+	padding:0;
+	margin:0;
+}
+
+#menue li{
+	border-bottom: 2px solid #EEE;
+	line-height: 1.7em;	
+	font-weight:bold;
+	font-size:14px;
+}
+
+div div#menue_container ul#menue li#visit{
+	border-left:4px solid #96b566;
+	background-color:#EFEFEF;
+}
+
+#menue_container li:first-child{
+	font-size:130%;
+	line-height:2.0em;
+}
+
+#sub_menue li, #sub_menue li:first-child{
+	border:none;
+	padding-left:30px;
+	font-size:90%;
+	line-height: 1.2em;
+	margin-top:0;
+	font-size:1.0em;
+}
+
+#sub_menue a{
+	color:#96b566;
+}
+
+#sub_menue a:hover{
+	border-right: 4px solid #96b566;
+}
+
+#sub_menue li:hover{
+	background-color: #EFEFEF;
+}
+
+#active li{
+	display: none; 
+}
+
+#active:hover li, #active:focus li{
+	display: block;
+}
+
+#login_out{
+	height:auto;
+	width:100%;
+	margin:30px 0;
+	font-size:120%;
+	font-weight:bold; 
+}
+		/* ENDE Menue */
+		
+		
+	/* Main content frame */
+	
+#main_frame{
+	width:100%;
+	border-right:4px solid #DFDFDF;
+	border-bottom:4px solid #DFDFDF;
+	background-color:#fff;
+	padding:0 15px 5px 5px;
+}
+
+#main_frame_head{
+	border-bottom:2px solid #DFDFDF;
+	width:95%;
+	margin:0 0 2% 3%;
+}
+
+#main_frame_head h2{
+	margin-top:0;
+	margin-bottom:10px;
+	padding-top:10px;
+	line-height:1.2;
+}
+
+#main_frame_body {
+	margin:0 0 2% 3%;
+	width:95%;
+	text-align:justify;
+}
+
+#main_frame_body p#link{
+	text-align:center !important; 
+	padding-top:10px;
+}
+
+
+#formular_auswahl p, #formular_auswahl form{
+	padding:0 10px 0 10px;
+}
+
+div#name_web{
+	margin:0;
+	padding:0;
+	width:75%;
+	height:50px;
+	border:none;
+	float:left;
+	border-bottom:3px solid #DFDFDF;
+	
+}
+
+div#name_web_ov{
+	margin:0;
+	padding-left:2%;
+	width:73%;
+	height:70px;
+	float:left;
+	border-bottom:2px solid #EFEFEF;
+	background-color:#EFEFEF;
+	border-bottom:3px solid #DFDFDF;
+}
+
+div#avatar{
+	margin:0;
+	padding:0;
+	text-align:right;
+	width:25%;
+	height:50px;
+	border:none;
+	float:right;
+	border-bottom:3px solid #DFDFDF;
+}
+
+div#avatar_ov{
+	margin:0;
+	padding:0;
+	text-align:right;
+	width:25%;
+	height:70px;
+	border:none;
+	float:right;
+	border-bottom:3px solid #DFDFDF;
+	background-color:#EFEFEF;
+}
+
+.main_frame_box{
+	width:100%;
+	border:1px solid #DFDFDF;
+	margin: 10px 0 20px 0;
+}
+
+.main_frame_box h3{
+	border-bottom:3px solid #DFDFDF;
+	background-color:#EFEFEF;
+	width:98%;
+	margin:0;
+	padding:1%;
+	font-size:15px;
+}
+
+.main_frame_box h4{
+	color:#96B566;
+	width:98%;
+	margin:0;
+	padding:1%;
+	font-size:14px;
+}
+
+.main_frame_box h6{
+	width:98%;
+	margin:0;
+	padding:0 1%;
+	font-size:12px;
+}
+
+.main_frame_box p{
+	padding:0 2px 10px;
+}
+
+	/* ENDE Main content frame */
+	
+
+	/* Footer Inhalt*/
+#footer_content{
+	color:#999;
+	background-color:#EFEFEF;
+	font-weight:bold;
+	border:4px solid #DFDFDF;
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+
+#footer_content p{
+	margin-top:10px;
+}
+	/* ENDE Footer Inhalt */
+
+/* ENDE Main page Design */
+
+/* ENDE Seiten-Layouts */
+
+/* SOnstige Angaben */
+
+fieldset{
+	border:none;
+}

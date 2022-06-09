@@ -1,0 +1,23 @@
+RewriteEngine Off
+
+# DISABLE CACHING
+<IfModule mod_expires.c>
+    # turn on the module for this directory
+    ExpiresActive on
+    # set default
+    ExpiresDefault "access plus 1 second"
+ 
+    # cache common graphics
+    ExpiresByType image/jpg "access plus 2 hours"
+    ExpiresByType image/gif "access plus 2 hours"
+    ExpiresByType image/jpeg "access plus 2 hours"
+    ExpiresByType image/png "access plus 2 hours"
+ 
+    # NO cache CSS
+    ExpiresByType text/css "access plus 1 second"
+ 
+    # NO cache other filetypes
+    ExpiresByType text/javascript "access plus 1 second"
+    ExpiresByType application/javascript "access plus 1 second"
+    ExpiresByType application/x-shockwave-flash "access plus 10 months"
+</IfModule>

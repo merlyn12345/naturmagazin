@@ -1,0 +1,48 @@
+<div class="clearer"></div>
+<!-- BEGIN fehlerausgabe -->
+<div class="main_frame_box" style="background-color:#ff0000;">{fehlermeldung}</div>
+<!-- END fehlerausgabe -->
+<!-- BEGIN formular -->
+<h1 align="left" id="aendernheader">Naturmagazin bearbeiten Ausgabe {ausgabe}</h1>
+<form action="index.php?id=17" method="post" id="postform">
+    <p><strong>Titel:</strong><br>
+<!-- BEGIN headline_error --><p style="background-color: #ff0000;width:80%;"> {headline_errortext}</p> <!-- END headline_error -->
+<input type="text" style="background-color:{error_head};" name="titel" class="nachricht" value="{titel}" size="50" maxlength="50" /></p>
+<p><strong>Editorial:</strong><br>
+<!-- BEGIN text_error --> <p style="background-color: #ff0000;width:80%;">{text_errortext} </p><!-- END text_error -->
+<textarea style="background-color:{error_text};"  name="text" cols="57" rows="15" id="text">{text}</textarea></p>
+<p>&nbsp;</p>
+<input type="hidden" id="galerien_id" name="galerien_id" value="{galerie_id}">
+<input type="hidden" id="ausgabe" name="ausgabe" value="{ausgabe}">
+<!--
+<p><strong>Magazin depublizieren/republizieren:</strong></p>
+<input type="checkbox" name="del" value="1" {checked}> 
+&nbsp;&nbsp;&nbsp;<img src="{delimage}" />
+<br>
+<br>
+<br>
+-->
+<p><strong>Vorschau:</strong><br>
+<textarea  name="vorschau" cols="57" rows="15" id="vorschau">{vorschau}</textarea></p>
+<p>&nbsp;</p>
+<div id="ex1" class="modal">
+    <p>Achtung, wollen Sie wirklich Ausgabe <span id="ausgabespan"></span> des Naturmagazin inklusive Bildern löschen?</p>
+    <a class="btn" id="magazinloeschen" href="#" rel="modal:close">Ja, Löschen</a><br><br>
+    <a href="#" rel="modal:close">Schließen</a>
+</div>
+
+<!-- END formular -->
+<section id="allwell">
+<input type="submit" value="Absenden"> | <a href="index.php?id=14">Abbrechen</a>
+</section>
+</form>
+<section id="loescharea">
+<br><br>
+<p><strong>Diese Ausgabe des Naturmagazin Löschen:</strong></p>
+<a class="btn" id="magazin" href="#ex1" rel="modal:open">Löschen</a><br><br>
+</section>
+<div id="response"></div>
+<div class="clearer"></div>
+
+<!-- ## ENDE CONTENT ## -->
+<script src="javascript/magazin_loeschen.js" type="text/javascript"></script>

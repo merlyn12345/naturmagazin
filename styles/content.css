@@ -1,0 +1,79 @@
+/* 
+    Document   : content
+    Created on : 27.11.2012, 22:54:11
+    Author     : User
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.inputbox {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    color: #222222;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 11px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+.input {
+    background-color: #ffffff;
+    border: none;
+    color: #222222;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+#img-container { width: 400px; }
+#img-container #text { float: left; width: 375px; }
+#img-container #text p { width: 300px; }
+#img-container .picture_holder { float: left; }
+#img-container .picture { /* padding-top: 10px; */ }
+#img-container .captioning .title { margin-top: 12px; font-weight: bold; }
+#img-container .captioning .caption { }
+
+td.cat_u,td.catHead_u,td.catBottom_u {font-weight: normal; font-size: 9px;background-color: #ffffff; color: #000000 }
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #f5f5f5;  border-top : 1px solid #000000;    border-bottom : 1px solid Black;  border-left : 1px solid Black;  border-right : 1px solid Black;}
+
+
+/* This is the border line & background colour round the main navigation */
+.naviline	{ background-color: #f5f5f5;  border-top : 1px solid #333300; }
+
+td.navi_main {background-color:#f5f5f5; border: #333300; border-left : 1px solid #333300;  border-right : 1px solid #333300; height: 18px; padding-left : 10px; padding-right : 10px;}
+
+td.navi_main_l {background-color:#f5f5f5; border: #333300;  border-right : 1px solid #333300; height: 18px;  padding-left : 10px; padding-right : 10px;}
+
+td.navi_main_r {background-color:#333300; border: #333300; border-left : 1px solid #333300; border-right : 0px solid #333300; height: 18px;  padding-left : 10px; padding-right : 10px;}
+
+/* This is the outline round the main forum tables */
+.forumline	{ background-color: #000000; border: 0px #000099 none; }
+
+
+/* Main table cell colours and backgrounds */
+td.row1	{ background-color: #DfDfDf;  border-top : 1px solid #FFFFFF; }
+td.row2	{ background-color: #cccccc;  border-top : 1px solid #FFFFFF; }
+td.row3	{ background-color: #e3e3e3;  border-top : 1px solid #FFFFFF;  }
+
+
+/*
+  This is for the table cell above the Topics, Post & Last posts on the index.php page
+  By default this is the fading out gradiated silver background.
+  However, you could replace this with a bitmap specific for each forum
+*/
+td.rowpic {
+		background-color: #c7c7c7; border-top : 1px solid #FFFFFF; border-right : 1px solid #FFFFFF;
+}
+
+/* Header cells - the blue and silver gradient backgrounds */
+th	{
+	color: #2F2F2F; font-size: 10px; font-weight : bold;
+	background-color: #c7c7c7; height: 20px; border-top : 1px solid #FFFFFF;
+	padding-left : 5px;
+}
+
+td.cat,td.catHead,td.catSides,td.catLeft,td.catRight,td.catBottom {
+			background-color:#c7c7c7; border: #FFFFFF; border-style: solid; height: 20px;padding-left : 5px;
+}
+

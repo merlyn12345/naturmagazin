@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title> Natur Magazin - Natur+Text GmbH</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="javascript/jquery-3.5.1.js" type="text/javascript"></script>
+        <script src="javascript/modal.js" type="text/javascript"></script>
+        <script src="javascript/interaction.js" type="text/javascript"></script>
+        
+        <link href="assets/nut.css" rel="stylesheet" type="text/css">
+        <link href="styles/modal.css" rel="stylesheet" type="text/css">
+        <link href="assets/nut-magazin.css" rel="stylesheet" type="text/css">
+
+       <link href="styles/styles_new.css" rel="stylesheet" type="text/css"> 
+
+    </head>
+    <body id="natur-magazin">
+        <img class="background-image" src="assets/background-magazin.jpg" alt="Hintergrundelement">
+
+        <div id="page-margins">
+
+            <div id="page" class="shadow">
+                <div class="header">
+
+                    <a href="http://www.naturmagazin.info/" class="logo">
+                        <img src="assets/nut-logo-natur-magazin.png" alt="Natur + Text Logo">
+                    </a>
+
+                    <div class="menu-main-container">
+   
+                    </div>
+
+
+                    <div class="header-article">
+                        <!-- BEGIN header -->
+                        <div id="left">
+                        <img src="{ausgabenbild}" id="ausgabenbild">
+                        </div>
+                        <div id="right" class="clearfix">
+                        <p id="headerpara">naturmagazin<br>Berlin-Brandenburg<br>Ausgabe {ausgabe}</p>
+                        </div>
+                        <!-- END header -->
+
+                    </div>
+                </div>
+
+                <div class="ticker">
+                </div>
+
+                <div class="main">
+                    <div class="left">
+<!-- maincontent -->
+
+                        <div id="content">
+                        <!--    
+                        <div class="container"> -->
+
+                        <!-- text and image -->
+                          {CONTENT}
+
+                        <!-- end text and image -->
+
+                       <!-- </div>
+                        -->
+                        </div>
+<!-- /maincontent -->
+                    <div class="herausgeber">
+                        <a href="http://www.oekowerk.de/"><img src="assets/logo_4C.gif" alt=""/></a>
+                        <a href="http://brandenburg.nabu.de/"><img src="assets/NABU_Logo_RGB_brandenburg_.jpg" alt=""/></a>
+                        <a href="http://www.naturschutzfonds.de/"><img src="assets/nsf_logo_gif_15895494.gif" alt=""/></a>
+                        <a href="http://www.naturundtext.de/verlag"><img src="assets/Nut_.png" alt=""/></a>
+                    </div>
+                        </div>
+                    
+
+                    <div class="right">
+
+                        <!-- BEGIN aktuellesMagazin -->
+                        <div class="article-right">
+                            <div class="top blue">
+                                <h2>Aktuelles Magazin</h2>
+
+                                <h3>Ausgabe {ausgabe}</h3>
+                                <div class="arrow">
+                                    <img src="assets/arrow-blue.png" alt="Pfeil blue">
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <a href="{pfad}{pdfurl}"><img src="{titelbild}" alt="Naturmagazin Ausgabe {ausgabe}" id="titelbildrechts"></a>
+                            </div>
+                        </div>
+                        <!-- END aktuellesMagazin -->                        
+
+                        <!-- Archivbox -->
+                        <div class="article-right">
+                            <div class="top olive">
+                                <h2>Archiv</h2>
+
+                                <h3>Die letzten 4 Ausgaben</h3>
+                                <div class="arrow">
+                                    <img src="assets/arrow-olive.png" alt="Pfeil olive">
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                
+                              <!-- BEGIN archiv -->
+                                <p>
+                                <!-- BEGIN archivlink -->
+                                <a href="{pfad}{pdfurl}?id={seiten_id}&magazinid={magazinid}">{ausgabe}</a>
+                                <!-- END archivlink -->
+                                </p>
+                                <!-- END archiv -->
+                                <p><a href="index.php?id=35">Frühere Ausgaben</a></p>    
+                            </div>
+                        </div>
+                         <!-- Ende Archivbox -->
+                        <div class="article-right">
+                            <div class="top blue">
+                                <h2>Vorschau</h2>
+                                <!-- BEGIN vorschau -->
+                                <h3>Ausgabe {ausgabe}</h3>
+                                <div class="arrow">
+                                    <img src="assets/arrow-blue.png" alt="Pfeil blue">
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p>{vorschaucontent}</p>
+                                <!-- END vorschau -->
+                            </div>
+                        </div>                         
+
+                        <!-- Menue plus Loginout -->
+                        <div class="article-right">
+                            <button id="logintoggle">Login</button>
+                        	<ul id="menue">
+                                <!-- BEGIN Menue -->
+                                <li>
+                                <!-- BEGIN item -->
+                                <a href="{url}?id={seiten_id}&galerie_id={galerie_id}">{text}</a>
+                                <!-- END item -->
+                                </li>
+                                <!-- END Menue -->
+                                </ul>
+                                <div id="login_out"> 
+                                <!-- BEGIN logged_in -->
+                                <!-- wenn der user angemeldet ist, dann bekommt er ein div angezeigt =>du bist als bla angemeldet & link zum ausloggen -->
+                                <div align="right" style="border:none; padding:10px 0; background-color:#ffffff; color:#000000; width:90%">
+                                Du bist als: <br /><span style="color:#96B566; text-decoration:underline;"> {name}</span><br />angemeldet<br /><br />
+                                <a href="logout.php">Ausloggen</a></div>
+                                <!-- END logged_in -->
+                                <!-- wenn der user nicht angemeldet ist -->
+
+                                <!-- BEGIN login_form -->
+                                {loginmessage}
+                                {fail_login}
+
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+
+                                <!-- loginformular -->
+                                
+                                <form action="auth.php" method="post" id="loginform" class="hidden">
+                                <table align="right">
+
+                                <tr>
+                                    <td  align="right"><p><b>{login_aufforderung}</b></p><input class="inputbox" type="text" name="username" size="12" maxlength="12" /></td>
+                                </tr>
+                                <tr>
+                                <td  class="input" align="right">Username</td>
+
+                                </tr>
+
+                                <tr>
+                                <td  align="right"><input class="inputbox" type="password" name="passwd" size="12" maxlength="12" /></td>
+                                </tr>
+                                <tr>
+                                <td  class="input" align="right">Passwort</td>
+                                </tr>
+                                <tr>
+                                <td  align="right"><input class="inputbox" type="submit" name="login" value="einloggen"/></td>
+                                </tr>
+                                </table>
+                                </form>
+
+                                <!-- END login_form -->
+                                </div>    
+                        </div>
+                    </div>
+                </div>
+                    <br class="clear">
+                
+                <div id="footer" class="footer"><p>Ihnen gefällt das neue naturmagazin und Sie möchten es regelmäßg lesen?<br>Im <a href="https://www.naturundtext.de/index.php/kategorie-natur-text/kategorie-naturmagazin-berlin-brandenburg"><strong>online-Buchladen</strong></a> von Natur+Text können Sie es einzeln oder als Abo bestellen</p><p>Sie interessieren sich für weitere Publikationen aus unserem Verlag?<br>Dann stöbern sie doch in unserem<a href="https://www.naturundtext.de/index.php/buchladen"><strong> Online-Buchladen</strong></a></p>
+                    <div class="impressumlink">
+                    <p><a href="index.php?id=56">Impressum&nbsp;|</a><a href="index.php?id=58">&nbsp;Datenschutz</a></p>
+                    </div>
+                    <div class="herausgebertext">
+                        <p>Herausgeber:<br>
+                            Naturschutzzentrum Ökowerk Berlin e.V.<br>
+                            NABU Brandenburg<br>
+                            Stiftung NaturSchutzFonds Brandenburg<br>
+                            Natur+Text GmbH</p>
+                    </div>
+                </div>
+                    </div>
+            </div>
+<!-- BEGIN toggleweg -->
+<!-- Loginbutton {flag} -->
+<script src="javascript/toggleweg.js" type="text/javascript"></script>
+<!-- END toggleweg -->
+<!-- done by georg lange webprogrammierung/webdesign 2020 -->
+    </body>
+</html>

@@ -1,0 +1,112 @@
+/* special magazine styles */
+
+#page-margins {
+	background: none;
+}
+
+#natur-magazin h1 {
+	color: #4e6e30;
+}
+
+#natur-magazin h3 {
+	color: #4e6c2e;
+}
+
+#natur-magazin .article-right h3 {
+	color: #fff;
+}
+
+#natur-magazin a:hover,
+#natur-magazin a.current {
+	color: #5b7032;
+}
+
+#natur-magazin .header {
+	background: #ffffff none no-repeat 0 0;
+}
+
+#natur-magazin .header-article {
+	background-color: #4e6e30;
+}
+
+#natur-magazin .footer {
+	background-color: #4E6E30;
+}
+
+#natur-magazin .header-article .quick-link-area .quick-link {
+	background-image: url("../images/article/bg-quick-links-olive.png");
+	background-color: #5b7032;
+}
+
+#natur-magazin .menu-main a:hover,
+#natur-magazin .menu-main li.current a {
+	color: #4e6e30;
+}
+
+#natur-magazin .blog h1 {
+	font-size: 24px;
+	color: #4e6c2e;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+#natur-magazin .blog h2 {
+	font-size: 14px;
+	color: #0d1914;
+	background: none;
+	padding: 0;
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+}
+
+#natur-magazin .blog .preface {
+	font-size: 14px;
+	color: #4e6c2e;
+	font-style: italic;
+	margin: 0 0 13px 0;
+	padding: 0;
+}
+
+#natur-magazin .menu-main .sub-menu {
+	background-color: #4e6e30;
+}
+
+#natur-magazin .menu-main li .sub-menu a {
+	color: #ffffff;
+}
+
+.menu-main li.has_submenu:hover a,
+.menu-main li.has_submenu.current a {
+	background: url("../images/menu/bg-main-li-current-magazin.png") no-repeat scroll left bottom transparent;
+}
+
+.ticker div.archive {
+	padding-left: 15px;
+	color: #a8a8a8;
+    font-size: 14px;
+	line-height: 37px;
+	font-weight: bold;
+}
+
+#natur-magazin h1.archive {
+	text-transform: uppercase;
+	color: #469cc3;
+}
+
+.archive a.first-anchor {
+	cursor: default
+}
+
+.archive a.first-anchor:hover {
+	color: #989898 !important;
+}
+
+#natur-magazin .menu-main .archive .sub-menu {
+	background-color: #989898;
+}
+
+.menu-main li.has_submenu.archive:hover a,
+.menu-main li.has_submenu.archive.current a {
+	background: url("../images/menu/bg-main-li-current-archive.png") no-repeat scroll left bottom transparent;
+}

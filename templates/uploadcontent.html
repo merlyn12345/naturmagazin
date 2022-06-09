@@ -1,0 +1,81 @@
+
+<!-- BEGIN message  -->
+<h1 style="color:#00ff00;">{message}</h1>
+<!-- END message  -->
+
+
+
+<!-- BEGIN form  -->
+<h1>Bilderupload</h1>
+<br />
+<br />
+<br />
+
+<p>Erlaubte Dateitypen sind:</p>
+<div align="left">
+<strong>jpg, gif, png</strong><br />
+Dateinamen d&uuml;rfen maximal 255 Zeichen lang sein. Doppelte Punkte im Dateinamen wie etwa:
+<pre>
+foo.bar.gif
+meine.png.vbs
+</pre>
+<p align="left">
+sind nicht erlaubt.<br>
+<br>&nbsp;<br>Die Dateigr&ouml;sse ist auf max. 10Mb begrenzt.<br>
+Da die Dateien nach dem Upload einen generierten, zufälligen Namen erhalten, ist es <strong>nicht möglich, vom Dateinamen auf das Bild bzw. dessen Zugehörigkeit zu einer Ausgabe oder Position zu schließen.</strong><br>Es ist daher ratsam, eine entsprechende Bildbeschreibung einzugeben.</p>
+</div>
+<form action="{action}?id=7" method="post" enctype="multipart/form-data">
+
+<table border="0" cellpadding="2" cellspacing="1" class="forumline">
+<tr>
+    <td align="left" valign="top" class="catHead" colspan="2"><strong>Magazin ausw&auml;hlen:</strong></td>
+</tr>
+<tr>
+<td align="left" valign="top" class="row1" colspan="2">
+<select name="galerie" id="galerie">
+    <!-- BEGIN row -->
+    <!-- BEGIN galerie -->
+    <option value="{galerien_id}">{galerien_titel}</option>
+    <!-- END galerie -->
+    <!-- END row -->
+</select>
+</td>
+</tr>
+<tr>
+    <td align="left" valign="top" class="catHead" colspan="2"><strong>Position ausw&auml;hlen:</strong><br><small>(nur Positionen, für die noch kein Bild hochgeladen wurde, sind wählbar)</small></td>
+</tr>
+<tr>
+<td align="left" valign="top" class="row1" colspan="2">
+    <input type="radio" name="bposition" value="1" <!-- BEGIN titelbild --> {disabled}  <!-- END titelbild -->>Titelbild<br>
+    <input type="radio" name="bposition" value="2" <!-- BEGIN ausgabebild --> {disabled}  <!-- END ausgabebild -->>Ausgabebild<br>
+    <input type="radio" name="bposition" value="3" <!-- BEGIN teaserbild --> {disabled}  <!-- END teaserbild -->>Teaser<br>
+    <input type="radio" name="bposition" value="4" <!-- BEGIN autorbild --> {disabled}  <!-- END autorbild -->>Autor Editorial<br>
+</td>
+</tr>
+<tr>
+    <td align="left" valign="top" class="catHead" colspan="2"><strong>Bild  ausw&auml;hlen:</strong></td>
+</tr>
+<tr>
+<td align="left" valign="top" class="catHead" colspan="2">
+<input type="file" name="users_file" />
+</td>
+</tr>
+<tr>
+    <td align="left" valign="top" class="row1" colspan="2"><strong>Bildbeschreibung: </strong><small>(kann leer bleiben, max 255 Zeichen)</small><br /><br /><br />
+<textarea name="bildbeschreibung" cols="80" rows="3" /></textarea>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top" class="catHead" width="160"><input type="submit" name="submit" value="abschicken" /></td><td class="catHead">
+<input type="reset"  value="reset" /></td>
+</tr>
+
+
+</table>
+
+</form>				
+<!-- END form  -->
+<script src="javascript/imagesupdater.js" type="text/javascript"></script>
+	
+

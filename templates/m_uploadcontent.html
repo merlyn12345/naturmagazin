@@ -1,0 +1,73 @@
+
+<!-- BEGIN message  -->
+<h1 style="color:#00ff00;">{message}</h1>
+<!-- END message  -->
+
+
+
+<!-- BEGIN form  -->
+<h1>Magazinupload</h1>
+<br />
+<br />
+<br />
+
+<p>Erlaubte Dateitypen sind:</p>
+<div align="left">
+<strong>.pdf</strong><br />
+Dateinamen d&uuml;rfen maximal 255 Zeichen lang sein. Doppelte Punkte im Dateinamen wie etwa:
+<pre>
+foo.bar.gif
+meine.png.vbs
+</pre>
+<p align="left">
+sind nicht erlaubt.<br>
+Bereits vorhandene, hochgeladene Dateien werden <span style="font-weight:bolder;color:#ff2010">nicht &uuml;berschrieben</span>, sie werden gar nicht erst hochgeladen.<br>
+<br>&nbsp;<br>Die Dateigr&ouml;sse ist auf max. 10Mb begrenzt.</p>
+</div>
+<div id="output"></div>
+<form action="{action}?id=8" method="post" enctype="multipart/form-data">
+
+<table border="0" cellpadding="2" cellspacing="1" class="forumline">
+
+<tr>
+    <td align="left" valign="top" class="catHead" colspan="2"><strong>Magazindatei ausw&auml;hlen:</strong></td>
+</tr>
+<tr>
+<td align="left" valign="top" class="catHead" colspan="2">
+<input type="file" name="users_file" />
+</td>
+</tr>
+<tr>
+    <td align="left" valign="top" class="row1" colspan="2"><strong><label for="ausgabe">Ausgabe</label></strong><small> (z.B. 03/2019)</small><br /><br /><br />
+        <input name="ausgabe" id="ausgabe" type="text" required="required">
+</td>
+</tr>
+<tr>
+    <td align="left" valign="top" class="row1" colspan="2"><strong><label for="voedate">VÖ-Datum</label></strong><br /><br /><br />
+<input name="voedate" id="voedate" type="date">
+</td>
+</tr>
+
+
+<tr>
+    <td align="left" valign="top" class="row1" colspan="2"><strong><label for="titel">Titel: </label></strong><small>(max 255 Zeichen)</small><br /><br /><br />
+<textarea name="titel" cols="80" rows="2" id="titel"></textarea>
+</td>
+</tr>
+<tr>
+    <td align="left" valign="top" class="row1" colspan="2"><label for="text"><strong>Editorial: </strong></label><br /><br /><br />
+<textarea name="text" id="text" cols="80" rows="3" ></textarea>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top" class="catHead" width="160"><input type="submit" name="submit" value="abschicken" /></td><td class="catHead">
+<input type="reset"  value="reset" /></td>
+</tr>
+
+
+</table>
+
+</form>				
+<!-- END form  -->
+<script src="javascript/ausgabenchecker.js" type="text/javascript"></script>

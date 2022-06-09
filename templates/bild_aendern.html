@@ -1,0 +1,71 @@
+<!-- BEGIN fehlerausgabe -->
+
+<div class="main_frame_box" style="background-color:#ff0000;">{fehlermeldung}</div>
+<!-- END fehlerausgabe -->
+<h3 align="left">Bild aendern</h3>
+<br />
+<br />
+<br />
+<!-- BEGIN formular -->
+<div id="warningsign">
+    <h3>Achtung, dieses Bild wird beim Absenden gelöscht!</h3>
+        <button id="okay">OK</button>&nbsp;|&nbsp;<button id="nay">Abbrechen</button>    
+</div>
+<form action="index.php?id=26" method="post" id="postform">
+
+<p><strong>Löschen / Gelöscht:</strong></p>
+<input type="checkbox" name="del" value="1" {checked} id="del"> 
+&nbsp;&nbsp;&nbsp;<img src="{delimage}" />&nbsp;{deltext}
+<br />
+<br />
+<br />
+
+<strong>Gehört zum Magazin: </strong>
+<select name="galerie">
+    <!-- BEGIN row -->
+    <!-- BEGIN galerie -->
+    <option value="{galerien_id}" {selected}>{ausgabe} | {galerien_titel}</option>
+    <!-- END galerie -->
+    <!-- END row -->
+</select>
+ <br />
+<br />
+<p><strong>Bildbeschreibung:</strong> <small>(255 Zeichen)</small></p>
+<!-- BEGIN text_error --> <p style="background-color: #ff0000;width:80%;">{text_errortext} </p><!-- END text_error -->
+<textarea style="background-color:{error_text};"  name="beschreibung" cols="57" rows="15" id="text">{beschreibung}</textarea>
+<p>&nbsp;</p>
+<input type="hidden" name="bild_id" value="{bild_id}" />
+<input type="hidden" name="url" value="{url}" >
+
+<p align="center">
+<input type="submit" value="Absenden" id="absenden">
+<input type="submit" value="Abbrechen">
+</p>
+</form>
+<img src="{path}{url}" alt="{url}">
+<script type="text/javascript">
+    /* 
+ deletewarnung bei bildern
+ */
+$('#okay').bind('click', function (e){
+   $('#absenden').removeAttr('disabled');
+   e.preventDefault();
+   $(this).parent().hide();
+});
+$('#nay').bind('click', function (e){
+   $('#absenden').removeAttr('disabled');
+   e.preventDefault();
+   $('#del').prop("checked", false);;
+   $(this).parent().hide();    
+});
+$('#warningsign').hide();
+
+$('#del').bind('click', function (){
+    $('#absenden').attr('disabled', 'disabled');
+    $('#warningsign').show();
+    
+});
+</script>
+<!-- END formular -->
+
+<!-- ## ENDE CONTENT ## -->

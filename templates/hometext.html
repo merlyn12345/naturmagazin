@@ -1,0 +1,25 @@
+<div class="clearer"></div>
+<!-- BEGIN fehlerausgabe -->
+<div class="main_frame_box" style="background-color:#ff0000;">{fehlermeldung}</div>
+<!-- END fehlerausgabe -->
+<!-- BEGIN formular -->
+<h3 align="center">Startseitentext bearbeiten</h3>
+<form action="index.php?id=24" method="post" id="postform">
+
+<p><strong>Text:</strong></p>
+<!-- BEGIN text_error --> <p style="background-color: #ff0000;width:80%;">{text_errortext} </p><!-- END text_error -->
+<textarea style="background-color:{error_text};"  name="introtext" cols="57" rows="15" id="introtext">{introtext}</textarea>
+<p>&nbsp;</p>
+<input type="hidden" name="id" value="{id}" />
+<!-- END formular -->
+
+<p align="center">
+<input type="submit" value="Absenden" />
+<input type="submit" value="Abbrechen" />
+</p>
+</form>
+
+<!-- ## ENDE CONTENT ## -->
+
+<div class="clearer"></div>
+<!-- ENDE Content -->	

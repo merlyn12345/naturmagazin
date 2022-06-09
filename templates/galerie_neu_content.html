@@ -1,0 +1,19 @@
+
+<!-- BEGIN formular -->
+<h3 align="left">Neue Galerie anlegen</h3>
+<form action="index.php?id=18" method="post" id="postform" name="postform">
+<p><strong>Titel:</strong></p>
+<!-- BEGIN headline_error --><p style="background-color: #ff0000;width:80%;"> {headline_errortext}</p> <!-- END headline_error -->
+<input type="text" style="background-color:{error_head};" name="titel" class="nachricht" value="{titel}" size="50"  maxlength="50" />
+
+<p><strong>Einleitungstext:</strong></p>
+<!-- BEGIN text_error --> <p style="background-color: #ff0000;width:80%;">{text_errortext} </p><!-- END text_error -->
+<textarea style="background-color:{error_text};"  name="text" cols="57" rows="15" id="text">{text}</textarea>
+<p>&nbsp;</p>
+<!-- END formular -->
+
+<p align="center">
+<input type="submit" value="Absenden" />
+<input type="submit" value="Abbrechen" />
+</p>
+</form>
